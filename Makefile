@@ -1,5 +1,5 @@
 #
-# This Makefile can be used to automatically build the entire package.  
+# This Makefile can be used to automatically build the entire package.
 #
 # If you make changes in the Makefile or code under any subdirectory, you can
 # rebuild the system with "make clean" followed by "make all".
@@ -7,7 +7,7 @@
 #
 # You can change the C compiler by setting CC=...
 #
-# CC=gcc
+export CC=gcc-9
 #
 # CFLAGS settings for 64 bit Linux/unix systems.
 #
@@ -15,7 +15,7 @@ export CFLAGS=-m64 -march=native -mtune=native -Ofast -fopenmp -ansi -Wall -DBIT
 #
 # LIBS settings for 64 bit Linux/unix systems.
 #
-export LIBS=-static -L../lib -lsdp -llapack -lblas -lm
+export LIBS=-L../lib -lsdp -llapack -lblas -lm
 #
 #
 # On most systems, this should handle everything.
@@ -46,7 +46,7 @@ install:
 
 #
 # Clean out all of the directories.
-# 
+#
 
 clean:
 	cd lib; make clean
@@ -54,11 +54,3 @@ clean:
 	cd theta; make clean
 	cd test; make clean
 	cd example; make clean
-
-
-
-
-
-
-
-

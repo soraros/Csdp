@@ -35,6 +35,12 @@
 *.i*86
 *.x86_64
 *.hex
+example/example
+solver/csdp
+theta/complement
+theta/graphtoprob
+theta/rand_graph
+theta/theta
 
 # Debug files
 *.dSYM/
@@ -51,5 +57,5 @@ Module.symvers
 Mkfile.old
 dkms.conf
 
-# emacs 
+# emacs
 *~
